@@ -23,7 +23,7 @@ contract licitacion {
     }
     
     function pagoFactura (uint presupuesto) public payable {
-        require(msg.value >= 2000000000000000000, "El costo del juego es de 0.2 ether.");
+        require(msg.value >= 2000000000000000000, "El costo de la licitacion es de 0.2 ether.");
         
         uint resultado = factura - presupuesto;
         
