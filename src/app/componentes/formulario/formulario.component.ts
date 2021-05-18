@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticulosService } from './articulos.service';
-import { HttpClient } from '@angular/common/http';
+import { SformularioService } from './sformulario.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-formulario',
+  templateUrl: './formulario.component.html',
+  styleUrls: ['./formulario.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'ProyectoPHP';
+export class FormularioComponent implements OnInit {
 
   articulos=null;
  
@@ -22,18 +20,18 @@ export class AppComponent implements OnInit{
     SubGeneroBanda:null,
     Mensaje:null
   }
-  constructor(private articulosServicio: ArticulosService) {}
+  constructor(private sformularioServicio: SformularioService) {}
 
   ngOnInit() {
     this.recuperarTodos();
   }
 
   recuperarTodos() {
-    this.articulosServicio.recuperarTodos().subscribe(result => this.articulos = result);
+    this.sformularioServicio.recuperarTodos().subscribe(result => this.articulos = result);
   }
   
   alta() {
-    this.articulosServicio.alta(this.art).subscribe(datos => {
+    this.sformularioServicio.alta(this.art).subscribe(datos => {
       if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
         this.recuperarTodos();
@@ -43,7 +41,7 @@ export class AppComponent implements OnInit{
   }
   
   baja(ID) {
-    this.articulosServicio.baja(ID).subscribe(datos => {
+    this.sformularioServicio.baja(ID).subscribe(datos => {
       if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
         this.recuperarTodos();
@@ -51,8 +49,6 @@ export class AppComponent implements OnInit{
     });
     window.location.reload();
   }
-
-  
 
   hayRegistros() {
     return true;

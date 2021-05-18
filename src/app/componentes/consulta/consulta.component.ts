@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticulosService } from './articulos.service';
-import { HttpClient } from '@angular/common/http';
+import { SconsultaService } from './sconsulta.service';
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-consulta',
+  templateUrl: './consulta.component.html',
+  styleUrls: ['./consulta.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'ProyectoPHP';
+export class ConsultaComponent implements OnInit {
 
   articulos=null;
  
@@ -22,18 +21,18 @@ export class AppComponent implements OnInit{
     SubGeneroBanda:null,
     Mensaje:null
   }
-  constructor(private articulosServicio: ArticulosService) {}
+  constructor(private sconsultaServicio: SconsultaService) {}
 
   ngOnInit() {
     this.recuperarTodos();
   }
 
   recuperarTodos() {
-    this.articulosServicio.recuperarTodos().subscribe(result => this.articulos = result);
+    this.sconsultaServicio.recuperarTodos().subscribe(result => this.articulos = result);
   }
   
   alta() {
-    this.articulosServicio.alta(this.art).subscribe(datos => {
+    this.sconsultaServicio.alta(this.art).subscribe(datos => {
       if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
         this.recuperarTodos();
@@ -43,7 +42,7 @@ export class AppComponent implements OnInit{
   }
   
   baja(ID) {
-    this.articulosServicio.baja(ID).subscribe(datos => {
+    this.sconsultaServicio.baja(ID).subscribe(datos => {
       if (datos['resultado']=='OK') {
         alert(datos['mensaje']);
         this.recuperarTodos();
@@ -51,8 +50,6 @@ export class AppComponent implements OnInit{
     });
     window.location.reload();
   }
-
-  
 
   hayRegistros() {
     return true;

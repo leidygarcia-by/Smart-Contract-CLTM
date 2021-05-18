@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row my-5">
+      <div>
+        <h1>Administracion de Solicitudes</h1>
+        <hr>
+  
+        <div *ngIf="hayRegistros(); else sinsolicitudes">
+          <tr *ngFor="let art of articulos">
+            <div class="p-2 bg-secondary row" style="border-radius: 5%;">
+              <div class="container-fluid py-3 text-white bg-dark" style="border-radius: 5%;">
+                <h2 class="col-md-3">Asunto</h2>
+                <p>{{art.ID}}. {{art.Asunto_Anuncio}}</p>
+                <h2 class="col-md-5">Descripcion</h2>
+                <p>{{art.Descripcion}}</p>
+                <h2 class="col-md-3">Telefonos</h2>
+                <p>{{art.Telefono1}}</p>
+                <p>{{art.Telefono2}}</p>
+                <h2 class="col-md-3">Generos</h2>
+                <p>{{art.GeneroBanda}}</p>
+                <p>{{art.SubGeneroBanda}}</p>
+                <h2 class="col-md-3">Mensaje adicional</h2>
+                <p>{{art.Mensaje}}</p>
+                <button type="button" class="btn btn-danger col-4" (click)="baja(art.ID)">Borrar Registro</button>
+              </div>
+            </div>
+          </tr>
+        </div>
+      </div>    
+    </div>
+    <ng-template #sinsolicitudes><p>No hay articulos.</p></ng-template>
+</div>

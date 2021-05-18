@@ -1,0 +1,116 @@
+<section>
+    <form>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col">
+                    <h1>Registro Solicitud de Integrantes Bandas</h1>
+                    <hr>
+    
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Asunto del anuncio</label>
+                            <input class="form-control form-control-lg" type="text" id="Asunto" name="Asunto" placeholder="Asunto del anuncio" [(ngModel)]="art.Asunto_Anuncio" required>
+                        </div>
+                        
+                        <br>
+  
+                        <div class="form-group">
+                            <label for="mensaje">Descripcion</label>
+                            <textarea class="form-control" id="Descripcion" name="Descripcion" [(ngModel)]="art.Descripcion" required></textarea>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="Telephone">Telefono 1</label>
+                            <input class="form-control" type="number" id="Telefono_1" name="Telefono_1" max="10" [(ngModel)]="art.Telefono1" required>
+                            <small class="form-text text-muted">Indica tu numero de contacto</small>
+                            <br>
+                            <br>
+                            <label for="Telephone">Telefono 2</label>
+                            <input class="form-control" type="number" id="Telefono_2" name="Telefono_2" max="10" [(ngModel)]="art.Telefono2" required>
+                            <small class="form-text text-muted">Indica tu numero de contacto secundario</small>
+                            <br>
+                            <br>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="seleccion">Selecciona el genero de la banda</label>
+                            <select name="seleccion" id="seleccion" class="form-control" [(ngModel)]="art.GeneroBanda" required>
+                                <option>	Alternative Metal	</option>
+                                <option>	Nu Metal	</option>
+                                <option>	Hard Rock	</option>
+                                <option>	Groove Metal	</option>
+                                <option>	Rap Metal	</option>
+                                <option>	Funk Metal	</option>
+                                <option>	Metal	</option>
+                                <option>	Metalcore	</option>
+                                <option>	Speed Metal	</option>
+                                <option>	Melodic Metalcore	</option>
+                                <option>	Industrial Metal	</option>
+                                <option>	Progressive Metal	</option>
+                                <option>	Power Metal	</option>
+                                <option>	Death Metal	</option>
+                                <option>	Thrash Metal	</option>
+                                <option>	Glam Metal	</option>
+                                <option>	Melodic Death Metal	</option>
+                                <option>	Neo Classical Metal	</option>
+                                <option>	Symphonic Metal	</option>
+                                <option>	Death Core	</option>
+                                <option>	Gothic Metal	</option>
+                                <option>	German Metal	</option>
+                                <option>	Gothic Symphonic Metal	</option>
+                                <option>	Stoner Rock	</option>
+                                <option>	Folk Metal	</option>
+                            </select>
+  
+                            <br>
+  
+                            <label for="seleccion">En caso de que la banda tenga mas de un genero, Seleccionalo</label>
+                            <select name="seleccion" id="seleccion" class="form-control" [(ngModel)]="art.SubGeneroBanda" required>
+                                <option>	Alternative Metal	</option>
+                                <option>	Nu Metal	</option>
+                                <option>	Hard Rock	</option>
+                                <option>	Groove Metal	</option>
+                                <option>	Rap Metal	</option>
+                                <option>	Funk Metal	</option>
+                                <option>	Metal	</option>
+                                <option>	Metalcore	</option>
+                                <option>	Speed Metal	</option>
+                                <option>	Melodic Metalcore	</option>
+                                <option>	Industrial Metal	</option>
+                                <option>	Progressive Metal	</option>
+                                <option>	Power Metal	</option>
+                                <option>	Death Metal	</option>
+                                <option>	Thrash Metal	</option>
+                                <option>	Glam Metal	</option>
+                                <option>	Melodic Death Metal	</option>
+                                <option>	Neo Classical Metal	</option>
+                                <option>	Symphonic Metal	</option>
+                                <option>	Death Core	</option>
+                                <option>	Gothic Metal	</option>
+                                <option>	German Metal	</option>
+                                <option>	Gothic Symphonic Metal	</option>
+                                <option>	Stoner Rock	</option>
+                                <option>	Folk Metal	</option>
+                            </select>
+  
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" name="mensaje" [(ngModel)]="art.Mensaje" required></textarea>
+                        </div>
+    
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                <button type="button" class="btn btn-success col-1 columna" (click)="alta()">Enviar</button>
+                                <div class="col-1 columna"></div>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+  </section>
