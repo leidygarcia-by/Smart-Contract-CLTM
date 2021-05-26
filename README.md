@@ -46,3 +46,19 @@ Finalmente se realiza la transacción es decir el pago de la licitación:
 
 ![Imagen8](https://user-images.githubusercontent.com/57902001/116338132-e136c100-a7a0-11eb-871b-23ae0165b7d9.png)
 
+Se pone enfuncionamiento el plan para el desarrollo del formulario de licitacion para estos contratos, se trabajo en un entorno de Docker y Remix en el cual se va ver todo el codigo fuente para que se puedan reguistrar los datoa para quienes se postulen a estas licitaciones. Se va manejar una base de datos en XAPP la cual va estar ligada con Docker. 
+
+Al iniciar con la inscripcion en el formulario aparecera en la pagina precio, tipo de licitacion, nombre y apellido de la persona, despues que se registre esta información madara una opcion de un listado de los postulados que ya estan. 
+
+![1](https://user-images.githubusercontent.com/80433518/119715028-2a724300-be29-11eb-8032-900960e15570.jpg)
+
+Listas de asuntos de las licitaciones con su presupuesto en ether donde se vera reflejado Metamask, como se observo en la anterior imagen con el proceso. 
+
+![2](https://user-images.githubusercontent.com/80433518/119715559-bf753c00-be29-11eb-989e-20839b998007.jpg)
+
+Se mostrara como fue creada y como estaria registrando los datos en el sistema. 
+
+![3](https://user-images.githubusercontent.com/80433518/119716515-d0727d00-be2a-11eb-9f28-e8dbecd4cf3a.jpg)
+
+
+
