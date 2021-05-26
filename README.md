@@ -35,19 +35,23 @@ Y destino de la transacción:
 Luego de confirmar la transacción nos aparecerá lo siguiente:
 
 ![Imagen5](https://user-images.githubusercontent.com/57902001/116338015-b5b3d680-a7a0-11eb-90d6-e7505ebbdbcf.png)
+
 Imagen 10. Confirmación de transacción 
 
 ahora el pago ya se realizó y la consola de remix mostrará el costo pagado:
 
 ![Imagen6](https://user-images.githubusercontent.com/57902001/116338044-bfd5d500-a7a0-11eb-983e-4b0f7a140d85.png)
+
 Imagen 11. Respuesta de petición 
 
 Finalmente se realiza la transacción es decir el pago de la licitación:
  
 ![Imagen7](https://user-images.githubusercontent.com/57902001/116338099-d3813b80-a7a0-11eb-9707-ef2ccbc153fa.png)
+
 Imagen 12. Interfaz ddel contrato
 
 ![Imagen8](https://user-images.githubusercontent.com/57902001/116338132-e136c100-a7a0-11eb-871b-23ae0165b7d9.png)
+
 Imagen 13. Verificación de la transacción 
 
 Se pone enfuncionamiento el plan para el desarrollo del formulario de licitacion para estos contratos, se trabajo en un entorno de Docker y Remix en el cual se va ver todo el codigo fuente para que se puedan reguistrar los datoa para quienes se postulen a estas licitaciones. Se va manejar una base de datos en XAPP la cual va estar ligada con Docker. 
@@ -56,13 +60,19 @@ Al iniciar con la inscripcion en el formulario aparecera en la pagina precio, ti
 
 ![1](https://user-images.githubusercontent.com/80433518/119715028-2a724300-be29-11eb-8032-900960e15570.jpg)
 
+Imagen 14. Interfaz
+
 Listas de asuntos de las licitaciones con su presupuesto en ether donde se vera reflejado Metamask, como se observo en la anterior imagen con el proceso. 
 
 ![2](https://user-images.githubusercontent.com/80433518/119715559-bf753c00-be29-11eb-989e-20839b998007.jpg)
 
+Imagen 15. Lista de postulantes
+
 Se mostrara como fue creada y como estaria registrando los datos en el sistema. ya sea en capacitación personal, compra de buses electricos y mantenimiento de flota de transmilenio. En la pagina creada para el aplicativo de las licitacion va mostrar que personas llenaron el formulario y que tipo de licitacion escogieron. Cuando no reconoco o no hay datos registrados aparecera como no hay licitación. 
 
 ![3](https://user-images.githubusercontent.com/80433518/119716515-d0727d00-be2a-11eb-9f28-e8dbecd4cf3a.jpg)
+
+Imagen 16. Base de datos
 
 
 En esta imagen mostrara como se va a llevar a cabo el desarrollo del codigo y la respuesta de la peticion quie se va optener despues de haber llenado el formulario y hacer pago del mismo por medio de los ether. 
