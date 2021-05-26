@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row my-5">
+      <div>
+        <h1>Licitaciones disponibles</h1>
+        <hr>
+  
+        <div *ngIf="hayRegistros(); else sinsolicitudes">
+          <div *ngFor="let art of articulos"> 
+            <!--| paginate: { itemsPerPage: 3, currentPage: page }">-->
+            <div class="p-1 bg-secondary row col" style="border-radius: 5%;">
+              <div class="container-fluid text-white bg-dark" style="border-radius: 5%;">
+                <h5 class="col-md-3">Asunto</h5>
+                <p style="font: 14px;">{{art.ID}}. {{art.asunto_licitacion}}</p>
+                <h5 class="col-md-3">Mensaje</h5>
+                <p>{{art.descripcion}}</p> 
+
+                
+
+                <button class="btn btn-primary" type="button" (click)="Link()">Pago de liquidacion</button>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>    
+    </div>
+    <ng-template #sinsolicitudes><p>No hay articulos.</p></ng-template>
+
+<!--
+<pagination-controls
+(pageChange)="page = ($event)"
+previousLabel="Anterior"
+nextLabel="Siguiente"
+></pagination-controls>
+-->

@@ -1,0 +1,43 @@
+<section>
+    <form>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col">
+                    <h1>Postulacion de Licitacion</h1>
+                    <hr>
+    
+                    <form>
+                        <div class="form-group">
+                            <label for="nombre">Asunto de la Licitacion </label>
+                            <input class="form-control form-control-lg" type="text" id="Asunto" name="Asunto" placeholder="Asunto del anuncio" [(ngModel)]="art.asunto_liquidacion">
+                        </div>
+                            
+                        <div class="form-group">
+                            <label for="mensaje">Nombres</label>
+                            <textarea class="form-control" id="nombre" name="nombre" [(ngModel)]="art.nombre" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nombre">Apellidos</label>
+                            <input class="form-control form-control-lg" type="text" id="apellido" name="apellido" placeholder="Apellidos" [(ngModel)]="art.apellido" required>
+                        </div>
+
+                        <hr>
+                        <div class="container">
+                            <div class="row">
+                                
+                                <div class="container">
+                                    <div class="row">
+                                        <button type="button" class="btn btn-success col-1 columna" (click)="altaforo()">Enviar</button>
+                                        <div class="col-1 columna"></div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

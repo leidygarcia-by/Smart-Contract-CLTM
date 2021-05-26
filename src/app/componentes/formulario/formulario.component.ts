@@ -22,14 +22,19 @@ export class FormularioComponent implements OnInit {
   }
   constructor(private sformularioServicio: SformularioService) {}
 
+  //Realiza el llamado de los registros a la pagina
   ngOnInit() {
     this.recuperarTodos();
   }
 
+  //Metodo que realiza el llamado de los datos de la base de datos
   recuperarTodos() {
     this.sformularioServicio.recuperarTodos().subscribe(result => this.articulos = result);
   }
-  
+    
+  /*Metodo que realiza el envio de los datos a la base de datos comprobando las variables
+  que esta creadas en la clase art, por ello es necesario en el templete hacer la interpolacion y el
+  uso de directivas para leer y escribir los datos*/  
   alta() {
     this.sformularioServicio.alta(this.art).subscribe(datos => {
       if (datos['resultado']=='OK') {
@@ -40,16 +45,8 @@ export class FormularioComponent implements OnInit {
     window.location.reload();
   }
   
-  baja(ID) {
-    this.sformularioServicio.baja(ID).subscribe(datos => {
-      if (datos['resultado']=='OK') {
-        alert(datos['mensaje']);
-        this.recuperarTodos();
-      }
-    });
-    window.location.reload();
-  }
-
+  /*Valida la existensia de registros en la base de datos para llamar iniciar el contenido
+  de la pagina*/
   hayRegistros() {
     return true;
   } 

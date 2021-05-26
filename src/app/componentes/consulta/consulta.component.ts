@@ -13,44 +13,24 @@ export class ConsultaComponent implements OnInit {
  
   art={
     ID:null,
-    Asunto_Anuncio:null,
-    Descripcion:null,
-    Telefono1:null,
-    Telefono2:null,
-    GeneroBanda:null,
-    SubGeneroBanda:null,
-    Mensaje:null
+    asunto_liquidacion:null,
+    nombre:null,
+    apellido:null,
   }
   constructor(private sconsultaServicio: SconsultaService) {}
 
+  //Realiza el llamado de los registros a la pagina
   ngOnInit() {
-    this.recuperarTodos();
+    this.recuperarTodosforo();
   }
 
-  recuperarTodos() {
-    this.sconsultaServicio.recuperarTodos().subscribe(result => this.articulos = result);
+  //Metodo que realiza el llamado de los datos de la base de datos
+  recuperarTodosforo() {
+    this.sconsultaServicio.recuperarTodosforo().subscribe(result => this.articulos = result);
   }
-  
-  alta() {
-    this.sconsultaServicio.alta(this.art).subscribe(datos => {
-      if (datos['resultado']=='OK') {
-        alert(datos['mensaje']);
-        this.recuperarTodos();
-      }
-    });
-    window.location.reload();
-  }
-  
-  baja(ID) {
-    this.sconsultaServicio.baja(ID).subscribe(datos => {
-      if (datos['resultado']=='OK') {
-        alert(datos['mensaje']);
-        this.recuperarTodos();
-      }
-    });
-    window.location.reload();
-  }
-
+    
+  /*Valida la existensia de registros en la base de datos para llamar iniciar el contenido
+  de la pagina*/
   hayRegistros() {
     return true;
   } 

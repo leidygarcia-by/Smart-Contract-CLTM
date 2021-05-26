@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class SconsultaService {
+export class SrformforoService {
 
   url='http://localhost/PaginaWebBlockchain/';
 
@@ -14,11 +14,8 @@ export class SconsultaService {
     return this.http.get(`${this.url}recuperarTodosforo.php`);
   }
 
-  alta(articulo) {
-    return this.http.post(`${this.url}alta.php`, JSON.stringify(articulo));    
+  altaforo(articulo) {
+    return this.http.post(`${this.url}altaforo.php`, JSON.stringify(articulo));    
   }
 
-  baja(ID:number) {
-    return this.http.get(`${this.url}baja.php?ID=${ID}`);
-  }
 }
