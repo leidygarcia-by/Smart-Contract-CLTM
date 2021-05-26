@@ -75,4 +75,4 @@ Se mostrara como fue creada y como estaria registrando los datos en el sistema. 
 Imagen 16. Base de datos
 
 
-En esta imagen mostrara como se va a llevar a cabo el desarrollo del codigo y la respuesta de la peticion quie se va optener despues de haber llenado el formulario y hacer pago del mismo por medio de los ether. 
+En esta imagen mostrara como se va a llevar a cabo el desarrollo del codigo y la respuesta de la peticion quie se va optener despues de haber llenado el formulario y hacer pago del mismo por medio de los ether
